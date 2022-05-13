@@ -2,13 +2,14 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"github/h1deOnBush/dousheng/internal/model"
 	"net/http"
 	"time"
 )
 
 type FeedResponse struct {
 	Response
-	VideoList []Video `json:"video_list,omitempty"`
+	VideoList []model.Video `json:"video_list,omitempty"`
 	NextTime  int64   `json:"next_time,omitempty"`
 }
 

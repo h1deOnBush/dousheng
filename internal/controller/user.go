@@ -2,17 +2,19 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"github/h1deOnBush/dousheng/internal/model"
 	"net/http"
 	"sync/atomic"
 )
 
+
 // usersLoginInfo use map to store user info, and key is username+password for demo
 // user data will be cleared every time the server starts
 // test data: username=zhanglei, password=douyin
-var usersLoginInfo = map[string]User{
+var usersLoginInfo = map[string]model.User{
 	"zhangleidouyin": {
 		Id:            1,
-		Name:          "zhanglei",
+		Username:          "zhanglei",
 		FollowCount:   10,
 		FollowerCount: 5,
 		IsFollow:      true,
@@ -29,7 +31,7 @@ type UserLoginResponse struct {
 
 type UserResponse struct {
 	Response
-	User User `json:"user"`
+	User model.User `json:"user"`
 }
 
 func Register(c *gin.Context) {
@@ -44,9 +46,9 @@ func Register(c *gin.Context) {
 		})
 	} else {
 		atomic.AddInt64(&userIdSequence, 1)
-		newUser := User{
+		newUser := model.User{
 			Id:   userIdSequence,
-			Name: username,
+			Username: username,
 		}
 		usersLoginInfo[token] = newUser
 		c.JSON(http.StatusOK, UserLoginResponse{

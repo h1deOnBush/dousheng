@@ -1,6 +1,8 @@
 package controller
 
-var DemoVideos = []Video{
+import "github/h1deOnBush/dousheng/internal/model"
+
+var DemoVideos = []model.Video{
 	{
 		Id:            1,
 		Author:        DemoUser,
@@ -12,7 +14,7 @@ var DemoVideos = []Video{
 	},
 }
 
-var DemoComments = []Comment{
+var DemoComments = []model.Comment{
 	{
 		Id:         1,
 		User:       DemoUser,
@@ -21,9 +23,9 @@ var DemoComments = []Comment{
 	},
 }
 
-var DemoUser = User{
+var DemoUser = model.User{
 	Id:            1,
-	Name:          "TestUser",
+	Username:          "TestUser",
 	FollowCount:   0,
 	FollowerCount: 0,
 	IsFollow:      false,
