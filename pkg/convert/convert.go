@@ -27,3 +27,8 @@ func (s StrTo) MustUInt32() uint32 {
 	v, _ := s.UInt32()
 	return v
 }
+
+func MustInt64(s string) int64 {
+	v, _ := strconv.ParseInt(s, 10, 64)
+	return v
+}

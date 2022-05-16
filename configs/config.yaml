@@ -33,3 +33,4 @@ JWT:
   Secret: simple-douyin
   Issuer: zhouhao
   Expire: 7200
+  IdentityKey: id

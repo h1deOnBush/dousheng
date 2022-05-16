@@ -2,8 +2,8 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
+	"github/h1deOnBush/dousheng/internal/middlewares"
 	v1 "github/h1deOnBush/dousheng/internal/routers/api/v1"
-	controller "github/h1deOnBush/dousheng/internal/controller"
 )
 
 func InitRouter(r *gin.Engine) {
@@ -11,27 +11,25 @@ func InitRouter(r *gin.Engine) {
 	r.Static("/static", "./public")
 
 	user := v1.NewUser()
-	video := v1.NewVideo()
+	//video := v1.NewVideo()
 
 	apiRouter := r.Group("/douyin")
-
-
 	// basic apis
-	apiRouter.GET("/feed/", video.Feed)
-	apiRouter.GET("/user/", user.UserInfo)
+	//apiRouter.GET("/feed/", video.Feed)
+	apiRouter.GET("/user/", middlewares.JWT(), user.GetUserInfo)
 	apiRouter.POST("/user/register/", user.Register)
 	apiRouter.POST("/user/login/", user.Login)
-	apiRouter.POST("/publish/action/", video.Publish)
-	apiRouter.GET("/publish/list/", video.PublishList)
+	//apiRouter.POST("/publish/action/", middlewares.JWT(), video.Publish)
+	//apiRouter.GET("/publish/list/", middlewares.JWT(), video.PublishList)
 
-	// extra apis - I
-	apiRouter.POST("/favorite/action/", controller.FavoriteAction)
-	apiRouter.GET("/favorite/list/", controller.FavoriteList)
-	apiRouter.POST("/comment/action/", controller.CommentAction)
-	apiRouter.GET("/comment/list/", controller.CommentList)
-
-	// extra apis - II
-	apiRouter.POST("/relation/action/", controller.RelationAction)
-	apiRouter.GET("/relation/follow/list/", controller.FollowList)
-	apiRouter.GET("/relation/follower/list/", controller.FollowerList)
+	//// extra apis - I
+	//apiRouter.POST("/favorite/action/", service.FavoriteAction)
+	//apiRouter.GET("/favorite/list/", service.FavoriteList)
+	//apiRouter.POST("/comment/action/", service.CommentAction)
+	//apiRouter.GET("/comment/list/", service.CommentList)
+	//
+	//// extra apis - II
+	//apiRouter.POST("/relation/action/", service.RelationAction)
+	//apiRouter.GET("/relation/follow/list/", service.FollowList)
+	//apiRouter.GET("/relation/follower/list/", service.FollowerList)
 }

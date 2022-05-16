@@ -10,11 +10,11 @@ type ServerSettingS struct {
 }
 
 type AppSettingS struct {
-	DefaultPageSize int
-	MaxPageSize     int
-	LogSavePath     string
-	LogFileName     string
-	LogFileExt      string
+	DefaultPageSize      int
+	MaxPageSize          int
+	LogSavePath          string
+	LogFileName          string
+	LogFileExt           string
 	UploadSavePath       string
 	UploadServerUrl      string
 	UploadImageMaxSize   int
@@ -36,9 +36,10 @@ type DatabaseSettingS struct {
 }
 
 type JWTSettingS struct {
-	Secret string
-	Issuer string
-	Expire time.Duration
+	Secret      string
+	Issuer      string
+	Expire      time.Duration
+	IdentityKey string
 }
 
 func (s *Setting) ReadSection(k string, v interface{}) error {

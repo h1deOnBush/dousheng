@@ -3,6 +3,7 @@ package model
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	global "github/h1deOnBush/dousheng/gloabal"
 	"github/h1deOnBush/dousheng/pkg/setting"
 	"time"

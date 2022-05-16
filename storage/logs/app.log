@@ -1,0 +1,4 @@
+2022/05/16 17:17:33 {"callers":["D:/program/project/practice/go/src/dousheng/main.go: 21 main.init.0"],"level":"error","message":" service.Register:err:错误码：20000000, 错误信息：用户名已存在","time":1652692653235817700}
+2022/05/16 17:22:12 {"callers":["D:/program/project/practice/go/src/dousheng/main.go: 21 main.init.0"],"level":"error","message":" service.Register:err:错误码：20000000, 错误信息：用户名已存在","time":1652692932379223400}
+2022/05/16 17:23:13 {"callers":["D:/program/project/practice/go/src/dousheng/main.go: 21 main.init.0"],"level":"error","message":" service.Register:err:错误码：20000000, 错误信息：用户名已存在","time":1652692993232686700}
+2022/05/16 17:37:47 {"callers":["D:/program/project/practice/go/src/dousheng/main.go: 21 main.init.0"],"level":"error","message":"service.GetUserInfo fail:错误码：20000001, 错误信息：用户不存在","time":1652693867830561600}
