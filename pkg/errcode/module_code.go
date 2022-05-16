@@ -28,3 +28,9 @@ var (
 	GetFollowListFail   = NewError(50000002, "获取关注列表失败")
 	GetFollowerListFail = NewError(50000003, "获取粉丝列表失败")
 )
+
+var (
+	CommentFail        = NewError(60000000, "评论失败")
+	DeleteCommentFail  = NewError(60000001, "删除评论失败")
+	GetCommentListFail = NewError(60000002, "获取评论列表失败")
+)

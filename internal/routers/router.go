@@ -14,6 +14,8 @@ func InitRouter(r *gin.Engine) {
 	video := v1.NewVideo()
 	favorite := v1.NewFavorite()
 	relation := v1.NewRelation()
+	comment := v1.NewComment()
+
 	apiRouter := r.Group("/douyin")
 	// basic apis
 	apiRouter.GET("/feed/", video.Feed)
@@ -26,8 +28,8 @@ func InitRouter(r *gin.Engine) {
 	//// extra apis - I
 	apiRouter.POST("/favorite/action/", middlewares.JWT(), favorite.FavoriteAction)
 	apiRouter.GET("/favorite/list/", middlewares.JWT(), favorite.FavoriteList)
-	//apiRouter.POST("/comment/action/", service.CommentAction)
-	//apiRouter.GET("/comment/list/", service.CommentList)
+	apiRouter.POST("/comment/action/", middlewares.JWT(), comment.CommentAction)
+	apiRouter.GET("/comment/list/", middlewares.JWT(), comment.CommentList)
 	//
 	// extra apis - II
 	apiRouter.POST("/relation/action/", middlewares.JWT(), relation.RelationAction)

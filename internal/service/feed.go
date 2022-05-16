@@ -5,7 +5,7 @@ import "time"
 func (svc *Service) Feed(latestTime time.Time, UserId int64) ([]*Video, int64, error) {
 	videoList := []*Video{}
 
-	videos, err := svc.dao.GetVideoListByTime(latestTime)
+	videos, err := svc.dao.GetVideoListByTimeDesc(latestTime)
 	if err != nil {
 		return nil, 0, err
 	}

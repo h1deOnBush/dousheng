@@ -24,7 +24,7 @@ func (d *Dao) CreateVideo(authorId int64, playUrl, coverUrl string) error {
 }
 
 // 根据时间返回视频列表
-func (d *Dao) GetVideoListByTime(latestTime time.Time) ([]*model.Video, error) {
+func (d *Dao) GetVideoListByTimeDesc(latestTime time.Time) ([]*model.Video, error) {
 	videoList := []*model.Video{}
 	result := d.db.Model(&model.Video{}).Where("created_on < ?", latestTime).Order("created_on DESC").Limit(30).Find(&videoList)
 	if result.Error != nil && result.Error != gorm.ErrRecordNotFound {

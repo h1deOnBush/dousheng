@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="918438a3-b5fa-4e4d-a725-11243765b127" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/service/upload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/upload/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/favorite.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/relation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/comment.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/dao/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/video.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/video.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/favorite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/comment.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/service/feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/feed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/publish.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/publish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/relation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/convert/convert.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/convert/convert.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/errcode/module_code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
