@@ -3,15 +3,17 @@ package service
 import (
 	"crypto/md5"
 	"fmt"
-	"github/h1deOnBush/dousheng/internal/model"
 	"github/h1deOnBush/dousheng/pkg/errcode"
 	"io"
 )
 
 // service层的user结构体设计
 type User struct {
-	*model.User
-	IsFollow bool
+	Id            int64  `json:"id"`
+	Username      string `json:"username"`
+	FollowCount   int64  `json:"follow_count"`
+	FollowerCount int64  `json:"follower_count"`
+	IsFollow      bool   `json:"is_follow"`
 }
 
 // 用户注册
@@ -69,18 +71,21 @@ func (svc *Service) GetUserInfo(userId, myId int64) (*User, error) {
 		return nil, errcode.UserNotExists
 	}
 	u := &User{
-		User:     user,
-		IsFollow: false,
+		Id:            user.Id,
+		Username:      user.Username,
+		FollowCount:   user.FollowCount,
+		FollowerCount: user.FollowerCount,
+		IsFollow:      false,
 	}
-	// 查看自己是否关注该用户, 如果是自己查询自己直接返回
-	if userId == myId {
+	// 查看自己是否关注该用户, 如果是自己查询自己直接返回。如果myId==0代表没有登录
+	if userId == myId || myId == 0 {
 		return u, nil
 	}
 	r, err := svc.dao.GetRelation(userId, myId)
 	if err != nil {
 		return nil, err
 	}
-	if r != nil {
+	if r.Id != 0 {
 		u.IsFollow = true
 	}
 	return u, nil

@@ -41,7 +41,7 @@ func (d *Dao) GetUserByName(username string) (*model.User, error) {
 // 根据id列表批量返回用户
 func (d *Dao) GetUserListById(userIdList []int64) ([]*model.User, error) {
 	userList := []*model.User{}
-	result := d.db.Where(userIdList).Find(userList)
+	result := d.db.Where(userIdList).Find(&userList)
 	if result.Error != nil && result.Error != gorm.ErrRecordNotFound {
 		return nil, result.Error
 	}

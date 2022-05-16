@@ -5,45 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="918438a3-b5fa-4e4d-a725-11243765b127" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/dao/comment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/favorite.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/video.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/middlewares/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/favorite.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/service/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/app/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/errcode/common_msg.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/service/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/upload/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/目录结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/目录结构.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/comment.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/demo_data.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/demo_data.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/favorite.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/feed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/publish.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/publish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/relation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/favorite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/relation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/dao/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/comment.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/video.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/video.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/video.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/app/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/app/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/favorite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/feed.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/publish.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/publish.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/relation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/convert/convert.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/convert/convert.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/setting/section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/errcode/module_code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

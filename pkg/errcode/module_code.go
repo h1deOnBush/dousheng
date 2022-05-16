@@ -9,3 +9,22 @@ var (
 	UserLoginFail         = NewError(20000004, "用户登录失败")
 	GetUserInfoFail       = NewError(20000005, "获取用户信息失败")
 )
+
+var (
+	ErrorUploadFileFail = NewError(30000000, "视频上传失败")
+	GetPublishListFail  = NewError(30000001, "获取发布失败")
+	GetFeedFail         = NewError(30000002, "获取Feed流失败")
+)
+
+var (
+	LikeFail            = NewError(40000000, "点赞失败")
+	UnlikeFail          = NewError(40000001, "取消点赞失败")
+	GetFavoriteListFail = NewError(40000002, "获取点赞列表失败")
+)
+
+var (
+	FollowFail          = NewError(50000000, "关注失败")
+	UnFollowFail        = NewError(50000001, "取消关注失败")
+	GetFollowListFail   = NewError(50000002, "获取关注列表失败")
+	GetFollowerListFail = NewError(50000003, "获取粉丝列表失败")
+)

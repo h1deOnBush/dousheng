@@ -1,52 +1,58 @@
 package service
 
-//type VideoListResponse struct {
-//	Response
-//	VideoList []model.Video `json:"video_list"`
-//}
-//
-//// Publish check token then save upload file to public directory
-//func Publish(c *gin.Context) {
-//	token := c.PostForm("token")
-//
-//	if _, exist := usersLoginInfo[token]; !exist {
-//		c.JSON(http.StatusOK, Response{StatusCode: 1, StatusMsg: "User doesn't exist"})
-//		return
-//	}
-//
-//	data, err := c.FormFile("data")
-//	if err != nil {
-//		c.JSON(http.StatusOK, Response{
-//			StatusCode: 1,
-//			StatusMsg:  err.Error(),
-//		})
-//		return
-//	}
-//
-//	filename := filepath.Base(data.Filename)
-//	user := usersLoginInfo[token]
-//	finalName := fmt.Sprintf("%d_%s", user.Id, filename)
-//	saveFile := filepath.Join("./public/", finalName)
-//	if err := c.SaveUploadedFile(data, saveFile); err != nil {
-//		c.JSON(http.StatusOK, Response{
-//			StatusCode: 1,
-//			StatusMsg:  err.Error(),
-//		})
-//		return
-//	}
-//
-//	c.JSON(http.StatusOK, Response{
-//		StatusCode: 0,
-//		StatusMsg:  finalName + " uploaded successfully",
-//	})
-//}
-//
-//// PublishList all users have same publish video list
-//func PublishList(c *gin.Context) {
-//	c.JSON(http.StatusOK, VideoListResponse{
-//		Response: Response{
-//			StatusCode: 0,
-//		},
-//		VideoList: DemoVideos,
-//	})
-//}
+type Video struct {
+	Id            int64  `json:"id,omitempty"`
+	Author        User   `json:"author"`
+	PlayUrl       string `json:"play_url"`
+	CoverUrl      string `json:"cover_url"`
+	FavoriteCount int64  `json:"favorite_count"`
+	CommentCount  int64  `json:"comment_count"`
+	IsFavorite    bool   `json:"is_favorite"`
+}
+
+func (svc *Service) Publish(authorId int64, playUrl, coverUrl string) error {
+	err := svc.dao.CreateVideo(authorId, playUrl, coverUrl)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+// 查询指定用户的发布列表
+func (svc *Service) PublishList(authorId int64) ([]*Video, error) {
+	videoList := []*Video{}
+	user, err := svc.GetUserInfo(authorId, authorId)
+	if err != nil {
+		return nil, err
+	}
+
+	// 查询指定用户发布的所有视频
+	videos, err := svc.dao.GetVideoListByAuthor(authorId)
+	if err != nil {
+		return nil, err
+	}
+	if len(videos) != 0 {
+		// 封装成想要返回的信息
+		for _, v := range videos {
+			vv := &Video{
+				Id:            v.Id,
+				Author:        *user,
+				PlayUrl:       v.PlayUrl,
+				CoverUrl:      v.CoverUrl,
+				FavoriteCount: v.FavoriteCount,
+				CommentCount:  v.CommentCount,
+				IsFavorite:    false,
+			}
+			// 查询自己是否点赞过自己的视频
+			f, err := svc.dao.GetFavorite(authorId, v.Id)
+			if err != nil {
+				return nil, err
+			}
+			if f.Id != 0 {
+				vv.IsFavorite = true
+			}
+			videoList = append(videoList, vv)
+		}
+	}
+	return videoList, nil
+}

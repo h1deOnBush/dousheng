@@ -23,8 +23,8 @@ func (s StrTo) UInt32() (uint32, error) {
 	return uint32(v), err
 }
 
-func (s StrTo) MustUInt32() uint32 {
-	v, _ := s.UInt32()
+func MustInt(s string) int {
+	v, _ := strconv.Atoi(s)
 	return v
 }
 
