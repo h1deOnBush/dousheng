@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="918438a3-b5fa-4e4d-a725-11243765b127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/comment.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/video.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sql/create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sql/create_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/comment.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/feed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/errcode/module_code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
