@@ -33,9 +33,11 @@ type FavoriteListResponse struct {
 }
 
 func (f Favorite) FavoriteAction(c *gin.Context) {
+	userIdI, _ := c.Get("user_id")
+	userId := userIdI.(int64)
 	// 参数校验
 	req := FavoriteActionRequest{
-		UserId:     convert.MustInt64(c.Query("user_id")),
+		UserId:     userId,
 		VideoId:    convert.MustInt64(c.Query("video_id")),
 		ActionType: convert.MustInt(c.Query("action_type")),
 	}
@@ -77,9 +79,11 @@ func (f Favorite) FavoriteAction(c *gin.Context) {
 }
 
 func (f Favorite) FavoriteList(c *gin.Context) {
+	userIdI, _ := c.Get("user_id")
+	userId := userIdI.(int64)
 	// 参数校验
 	req := FavoriteListRequest{
-		UserId: convert.MustInt64(c.Query("user_id")),
+		UserId: userId,
 	}
 	response := app.NewResponse(c)
 	valid, errs := app.BindAndValid(c, &req)

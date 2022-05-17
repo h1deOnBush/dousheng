@@ -18,7 +18,7 @@ func JWT() gin.HandlerFunc {
 		if s, exist := c.GetQuery("token"); exist {
 			token = s
 		} else {
-			token = c.GetHeader("token")
+			token = c.PostForm("token")
 		}
 		if token == "" {
 			ecode = errcode.InvalidParams

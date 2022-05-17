@@ -9,8 +9,8 @@ App:
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
-  UploadSavePath: public
-  UploadServerUrl: http://127.0.0.1:8080/static
+  UploadSavePath: public #保存地址
+  UploadServerUrl: http://10.121.27.46:8080/static #访问地址
   UploadImageMaxSize: 10  # MB
   UploadImageAllowExts:
     - .jpg

@@ -36,9 +36,11 @@ type CommentListResponse struct {
 }
 
 func (cmt Comment) CommentAction(c *gin.Context) {
+	userIdI, _ := c.Get("user_id")
+	userId := userIdI.(int64)
 	// 参数校验
 	req := CommentActionRequest{
-		UserId:      convert.MustInt64(c.Query("user_id")),
+		UserId:      userId,
 		VideoId:     convert.MustInt64(c.Query("video_id")),
 		ActionType:  convert.MustInt(c.Query("action_type")),
 		CommentText: c.Query("comment_text"),
@@ -81,9 +83,11 @@ func (cmt Comment) CommentAction(c *gin.Context) {
 }
 
 func (cmt Comment) CommentList(c *gin.Context) {
+	userIdI, _ := c.Get("user_id")
+	userId := userIdI.(int64)
 	// 参数校验
 	req := CommentListRequest{
-		UserId:  convert.MustInt64(c.Query("user_id")),
+		UserId:  userId,
 		VideoId: convert.MustInt64(c.Query("video_id")),
 	}
 	response := app.NewResponse(c)

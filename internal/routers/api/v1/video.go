@@ -52,7 +52,7 @@ func (v Video) Publish(c *gin.Context) {
 	// 在数据库中创建一条记录
 	userIdI, _ := c.Get("user_id")
 	userId := userIdI.(int64)
-	err = svc.Publish(userId, fileInfo.AccessUrl, "")
+	err = svc.Publish(userId, fileInfo.AccessUrl, global.AppSetting.UploadServerUrl+"/cover.jpg")
 
 	if err != nil {
 		global.Logger.Errorf(c, "dao.CreateVideo fail, err:%v", err)
