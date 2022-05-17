@@ -32,10 +32,8 @@ type FollowListResponse struct {
 }
 
 func (r Relation) RelationAction(c *gin.Context) {
-	userIdI, _ := c.Get("user_id")
-	userId := userIdI.(int64)
 	req := RelationActionRequest{
-		UserId:     userId,
+		UserId:     convert.MustInt64(c.Query("user_id")),
 		ToUserId:   convert.MustInt64(c.Query("to_user_id")),
 		ActionType: convert.MustInt(c.Query("action_type")),
 	}

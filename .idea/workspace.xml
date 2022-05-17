@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="918438a3-b5fa-4e4d-a725-11243765b127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/favorite.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/video.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/video.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/favorite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/relation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/video.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/video.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/favorite.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/favorite.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/service/feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/feed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/publish.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/publish.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "D:/program/project/practice/go/src/dousheng/internal/dao",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "go.sdk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/program/project/practice/go/src/dousheng/internal/dao&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\program\project\practice\go\src\dousheng\internal\dao" />

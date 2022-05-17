@@ -19,6 +19,10 @@ func NewVideo() Video {
 	return Video{}
 }
 
+type PublishListRequest struct {
+	UserId int64 `json:"user_id" binding:"gt=0"`
+}
+
 type PublishListResponse struct {
 	Response
 	VideoList []*service.Video `json:"video_list"`
@@ -52,7 +56,8 @@ func (v Video) Publish(c *gin.Context) {
 	// 在数据库中创建一条记录
 	userIdI, _ := c.Get("user_id")
 	userId := userIdI.(int64)
-	err = svc.Publish(userId, fileInfo.AccessUrl, global.AppSetting.UploadServerUrl+"/cover.jpg")
+	title := c.PostForm("title")
+	err = svc.Publish(userId, title, fileInfo.AccessUrl, global.AppSetting.UploadServerUrl+"/cover.jpg")
 
 	if err != nil {
 		global.Logger.Errorf(c, "dao.CreateVideo fail, err:%v", err)
@@ -67,12 +72,22 @@ func (v Video) Publish(c *gin.Context) {
 }
 
 func (v Video) PublishList(c *gin.Context) {
-	response := app.NewResponse(c)
-	svc := service.New(c.Request.Context())
 	userIdI, _ := c.Get("user_id")
 	userId := userIdI.(int64)
+	// 参数校验
+	req := PublishListRequest{UserId: userId}
 
-	videos, err := svc.PublishList(userId)
+	valid, errs := app.BindAndValid(c, &req)
+	response := app.NewResponse(c)
+	if !valid {
+		global.Logger.Errorf(c, "app.BindAndValid errs:%v", errs)
+		response.ToErrorResponse(errcode.InvalidParams.WithDetails(errs.Errors()...))
+		return
+	}
+
+	svc := service.New(c.Request.Context())
+
+	videos, err := svc.PublishList(req.UserId)
 	if err != nil {
 		global.Logger.Errorf(c, "service.PublishList, err:%v", err)
 		response.ToErrorResponse(errcode.GetPublishListFail)

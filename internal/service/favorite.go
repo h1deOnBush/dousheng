@@ -45,6 +45,7 @@ func (svc *Service) GetFavoriteList(userId int64) ([]*Video, error) {
 		}
 		vv := &Video{
 			Id:            v.Id,
+			Title:         v.Title,
 			Author:        *user,
 			PlayUrl:       v.PlayUrl,
 			CoverUrl:      v.CoverUrl,

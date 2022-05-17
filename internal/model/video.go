@@ -4,6 +4,7 @@ import "time"
 
 type Video struct {
 	Id            int64     `json:"id,omitempty"`
+	Title         string    `json:"title"`
 	AuthorId      int64     `json:"author_id,omitempty"`
 	PlayUrl       string    `json:"play_url,omitempty"`
 	CreatedOn     time.Time `json:"created_on,omitempty"`

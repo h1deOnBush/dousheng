@@ -7,8 +7,9 @@ import (
 )
 
 // 上传一条视频
-func (d *Dao) CreateVideo(authorId int64, playUrl, coverUrl string) error {
+func (d *Dao) CreateVideo(authorId int64, title, playUrl, coverUrl string) error {
 	video := model.Video{
+		Title:         title,
 		AuthorId:      authorId,
 		PlayUrl:       playUrl,
 		CreatedOn:     time.Now(),

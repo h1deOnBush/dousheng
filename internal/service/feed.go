@@ -15,6 +15,7 @@ func (svc *Service) Feed(latestTime time.Time, UserId int64) ([]*Video, int64, e
 			user, err := svc.GetUserInfo(v.AuthorId, UserId)
 			vv := &Video{
 				Id:            v.Id,
+				Title:         v.Title,
 				Author:        *user,
 				PlayUrl:       v.PlayUrl,
 				CoverUrl:      v.CoverUrl,

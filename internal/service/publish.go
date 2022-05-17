@@ -3,6 +3,7 @@ package service
 type Video struct {
 	Id            int64  `json:"id,omitempty"`
 	Author        User   `json:"author"`
+	Title         string `json:"title"`
 	PlayUrl       string `json:"play_url"`
 	CoverUrl      string `json:"cover_url"`
 	FavoriteCount int64  `json:"favorite_count"`
@@ -10,8 +11,8 @@ type Video struct {
 	IsFavorite    bool   `json:"is_favorite"`
 }
 
-func (svc *Service) Publish(authorId int64, playUrl, coverUrl string) error {
-	err := svc.dao.CreateVideo(authorId, playUrl, coverUrl)
+func (svc *Service) Publish(authorId int64, title, playUrl, coverUrl string) error {
+	err := svc.dao.CreateVideo(authorId, title, playUrl, coverUrl)
 	if err != nil {
 		return err
 	}
@@ -36,6 +37,7 @@ func (svc *Service) PublishList(authorId int64) ([]*Video, error) {
 		for _, v := range videos {
 			vv := &Video{
 				Id:            v.Id,
+				Title:         v.Title,
 				Author:        *user,
 				PlayUrl:       v.PlayUrl,
 				CoverUrl:      v.CoverUrl,
