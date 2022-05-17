@@ -10,7 +10,7 @@ import (
 // service层的user结构体设计
 type User struct {
 	Id            int64  `json:"id"`
-	Username      string `json:"username"`
+	Username      string `json:"name"`
 	FollowCount   int64  `json:"follow_count"`
 	FollowerCount int64  `json:"follower_count"`
 	IsFollow      bool   `json:"is_follow"`

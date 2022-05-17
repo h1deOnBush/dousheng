@@ -49,9 +49,9 @@ type LoginResponse struct {
 // 获取用户信息请求
 type GetUserInfoRequest struct {
 	// 需要请求的用户信息id, 可能是自己，可能不是自己
-	ToUserId int64
+	ToUserId int64 `binding:"gt=0"`
 	// 自己的用户id
-	UserId int64
+	UserId int64 `binding:"gt=0"`
 }
 
 type GetUserInfoResponse struct {

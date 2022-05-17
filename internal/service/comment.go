@@ -4,7 +4,7 @@ type Comment struct {
 	Id         int64  `json:"id"`
 	User       User   `json:"user"`
 	Content    string `json:"content"`
-	CreateDate string `json:"createDate"`
+	CreateDate string `json:"create_date"`
 }
 
 func (svc *Service) CommentOn(userId, videoId int64, commentText string) error {

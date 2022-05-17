@@ -5,7 +5,7 @@ import (
 	"github/h1deOnBush/dousheng/internal/model"
 )
 
-// 点赞视频
+// 点赞视频, 点赞前需要先查看是否已经点赞
 func (d *Dao) CreateFavorite(userId, videoId int64) error {
 	favorite := model.Favorite{
 		UserId:  userId,

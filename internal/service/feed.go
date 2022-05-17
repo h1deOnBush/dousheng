@@ -24,7 +24,7 @@ func (svc *Service) Feed(latestTime time.Time, UserId int64) ([]*Video, int64, e
 			}
 
 			// 在登录情况下查询自己是否点赞过该作品
-			f, err := svc.dao.GetFavorite(v.Id, UserId)
+			f, err := svc.dao.GetFavorite(UserId, v.Id)
 			if err != nil {
 				return nil, 0, err
 			}
